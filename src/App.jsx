@@ -300,7 +300,7 @@ export default function DeveloperPortfolio() {
                 <div className="absolute -inset-1 bg-green-500/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
               <div>
-                <span className="text-xl font-bold text-green-400 group-hover:text-cyan-400 transition-colors">Iftekhar Uddin Rafti</span>
+                <span className="text-xl md:text-lg font-bold text-green-400 group-hover:text-cyan-400 transition-colors">Iftekhar Uddin Rafti</span>
                 <div className="text-xs text-cyan-400 flex items-center space-x-1">
                   <MapPin className="w-3 h-3" />
                   <span>Dhaka, Bangladesh</span>
