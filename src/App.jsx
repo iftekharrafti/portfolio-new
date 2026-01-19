@@ -590,7 +590,7 @@ export default function DeveloperPortfolio() {
           <div className="mt-16 text-center">
             <h3 className="text-2xl font-bold text-green-400 mb-8">Additional Technologies & Tools</h3>
             <div className="flex flex-wrap justify-center gap-4">
-              {['Git', 'Docker', 'AWS', 'Nginx', 'CI/CD', 'Webpack', 'Jest', 'Postman', 'Figma', 'VS Code'].map((tool, idx) => (
+              {['Git', 'Docker', 'AWS', 'Nginx', 'CI/CD', 'Webpack', 'Postman', 'Figma', 'VS Code'].map((tool, idx) => (
                 <div
                   key={idx}
                   className="group relative px-6 py-3 bg-black/50 border border-green-500/30 rounded-lg hover:border-cyan-500 transition-all duration-300 hover:scale-110"
