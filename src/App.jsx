@@ -191,7 +191,7 @@ export default function DeveloperPortfolio() {
     {
       name: 'Nirzhor',
       description: 'Feature-rich E-Commerce Platform with product filtering, wishlist, cart management, and secure checkout process',
-      tech: ['React', 'Node.js', 'MongoDB', 'PayPal'],
+      tech: ['React', 'Node.js', 'MongoDB'],
       type: 'E-Commerce',
       gradient: 'from-pink-500 via-rose-600 to-red-600',
       stats: { products: '300+', orders: '30K+', rating: '4.8/5' },
@@ -417,9 +417,9 @@ export default function DeveloperPortfolio() {
           {/* Social Links with Animation */}
           <div className="flex justify-center space-x-6">
             {[
-              { icon: Github, href: 'https://github.com', color: 'hover:text-purple-400' },
-              { icon: Linkedin, href: 'https://linkedin.com', color: 'hover:text-blue-400' },
-              { icon: Mail, href: 'mailto:rafti@example.com', color: 'hover:text-red-400' }
+              { icon: Github, href: 'https://github.com/iftekharrafti', color: 'hover:text-purple-400' },
+              { icon: Linkedin, href: 'https://www.linkedin.com/in/iftekhar-rafti/', color: 'hover:text-blue-400' },
+              { icon: Mail, href: 'mailto:iftekharrafti7040@gmail.com', color: 'hover:text-red-400' }
             ].map((social, idx) => (
               <a
                 key={idx}
