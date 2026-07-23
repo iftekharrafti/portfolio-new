@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Mail, Github, Linkedin, Code, Database, Server, Terminal, ExternalLink, MapPin, Send, Zap, Sparkles, Cpu, Globe, Layers, Box } from 'lucide-react';
+import { Mail, Github, Linkedin, Code, Database, Server, Terminal, ExternalLink, MapPin, Send, Zap, Sparkles, Cpu, Layers, Box } from 'lucide-react';
+import { projects } from './data/projects';
 
 export default function DeveloperPortfolio() {
   const [activeSection, setActiveSection] = useState('home');
@@ -139,63 +140,6 @@ export default function DeveloperPortfolio() {
       description: 'Developed and maintained multiple web applications and e-commerce platforms.',
       tech: ['Node.js', 'Express.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker', 'React', 'Next.js', 'Prisma', 'Sequelize', 'Vercel', 'VPS'],
       current: false
-    }
-  ];
-
-  const projects = [
-    {
-      name: 'ISLE',
-      description: 'Advanced Multi-vendor E-commerce Platform with vendor dashboard, real-time analytics, payment gateway integration, and inventory management',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redis'],
-      type: 'E-Commerce',
-      gradient: 'from-purple-600 via-pink-600 to-red-600',
-      stats: { users: '10K+', vendors: '100+', transactions: '50K+' },
-      features: ['Multi-vendor System', 'Real-time Analytics', 'Payment Integration', 'Inventory Management']
-    },
-    {
-      name: 'Naturo E-Commerce',
-      description: 'Complete E-Commerce SaaS Solution, advanced analytics',
-      tech: ['Next.js', 'Express.js', 'MySQL', 'AWS', 'Prisma', 'Redis'],
-      type: 'SaaS',
-      gradient: 'from-green-500 via-emerald-600 to-teal-600',
-      stats: { businesses: '200+', revenue: '$900K+', uptime: '99.9%' },
-      features: ['Advanced Analytics', 'Cloud Hosting']
-    },
-    {
-      name: 'Toofan Courier',
-      description: 'Comprehensive Courier Service Management System, route optimization, and automated dispatch',
-      tech: ['React', 'Node.js', 'MySQL'],
-      type: 'Management',
-      gradient: 'from-blue-600 via-indigo-600 to-purple-600',
-      stats: { deliveries: '100K+', drivers: '1K+', cities: '50+' },
-      features: ['Real-time Tracking', 'Route Optimization', 'Auto Dispatch', 'SMS Notifications']
-    },
-    {
-      name: 'Dhum',
-      description: 'Modern OTT Streaming Platform with adaptive streaming, content management, subscription handling, and user analytics',
-      tech: ['React', 'Node.js', 'MySQL', 'VPS', 'Video Streaming'],
-      type: 'Media',
-      gradient: 'from-red-600 via-orange-600 to-yellow-500',
-      stats: { subscribers: '50K+', content: '5K+', hours: '2M+' },
-      features: ['Adaptive Streaming', 'Content CMS', 'Subscription System', 'User Analytics']
-    },
-    {
-      name: 'StPOS',
-      description: 'Advanced Point of Sale Software with inventory control, sales reporting, customer management, and multi-location support',
-      tech: ['Vue.js', 'Express.js', 'PostgreSQL', 'Print API'],
-      type: 'Retail',
-      gradient: 'from-cyan-500 via-blue-600 to-indigo-600',
-      stats: { stores: '300+', sales: '$2M+', items: '100K+' },
-      features: ['Inventory Control', 'Sales Reports', 'Multi-location', 'Receipt Printing']
-    },
-    {
-      name: 'Nirzhor',
-      description: 'Feature-rich E-Commerce Platform with product filtering, wishlist, cart management, and secure checkout process',
-      tech: ['React', 'Node.js', 'MongoDB'],
-      type: 'E-Commerce',
-      gradient: 'from-pink-500 via-rose-600 to-red-600',
-      stats: { products: '300+', orders: '30K+', rating: '4.8/5' },
-      features: ['Advanced Filters', 'Wishlist System', 'Secure Checkout', 'Order Tracking']
     }
   ];
 
@@ -739,6 +683,17 @@ export default function DeveloperPortfolio() {
                         </span>
                       ))}
                     </div>
+
+                    {/* View Button */}
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative z-10 mt-6 inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-green-500 to-cyan-500 px-6 py-3 rounded-lg hover:from-green-600 hover:to-cyan-600 transition-all duration-300 shadow-lg shadow-green-500/40 font-bold text-white"
+                    >
+                      <span>View Project</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
                   </div>
 
                   {/* Hover Overlay */}
@@ -748,15 +703,6 @@ export default function DeveloperPortfolio() {
             ))}
           </div>
 
-          {/* View All Projects Button */}
-          <div className="mt-16 text-center">
-            <button className="group relative inline-flex items-center space-x-3 bg-gradient-to-r from-green-500 to-cyan-500 px-10 py-4 rounded-xl hover:from-green-600 hover:to-cyan-600 transition-all duration-300 shadow-lg shadow-green-500/50 hover:shadow-green-500/70 transform hover:scale-105">
-              <Globe className="w-6 h-6" />
-              <span className="font-bold text-lg">View All Projects</span>
-              <ExternalLink className="w-5 h-5 animate-pulse" />
-              <div className="absolute inset-0 border-2 border-white rounded-xl animate-ping opacity-0 group-hover:opacity-30" />
-            </button>
-          </div>
         </div>
       </section>
 
